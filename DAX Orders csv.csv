@@ -1,0 +1,101 @@
+﻿Order ID,Product ID,Product,Product State,Selling Price,Product Cost,Quantity
+80801,101,Malapua,Bihar,300,250,21
+80802,102,Dhokla,Gujarat,575,90,19
+80803,103,Mysore pak,Karnataka,275,250,18
+80804,104,Modak,Maharashtra,250,185,10
+80805,105,Gajar ka halwa,Punjab,1250,150,9
+80806,106,Ghevar,Rajasthan,500,250,12
+80807,107,Jalebi,Uttar Pradesh,350,50,17
+80808,108,Peda,Uttar Pradesh,700,300,8
+80814,104,Modak,Maharashtra,250,185,46
+80828,104,Modak,Maharashtra,250,185,34
+80811,101,Malapua,Bihar,300,250,32
+80812,102,Dhokla,Gujarat,575,90,41
+80813,103,Mysore pak,Karnataka,275,250,25
+80861,104,Modak,Maharashtra,250,185,41
+80815,101,Malapua,Bihar,300,250,45
+80816,102,Dhokla,Gujarat,575,90,18
+80817,101,Malapua,Bihar,300,250,40
+80818,102,Dhokla,Gujarat,575,90,33
+80877,104,Modak,Maharashtra,250,185,17
+80885,104,Modak,Maharashtra,250,185,39
+80895,104,Modak,Maharashtra,250,185,11
+80810,110,Pani puri,Uttar Pradesh,20,5,101
+80820,110,Pani puri,Uttar Pradesh,20,5,15
+80822,110,Pani puri,Uttar Pradesh,20,5,44
+80823,110,Pani puri,Uttar Pradesh,20,5,42
+80826,102,Dhokla,Gujarat,575,90,11
+80827,103,Mysore pak,Karnataka,275,250,33
+80825,110,Pani puri,Uttar Pradesh,20,5,42
+80829,101,Malapua,Bihar,300,250,19
+80830,102,Dhokla,Gujarat,575,90,16
+80831,101,Malapua,Bihar,300,250,21
+80832,102,Dhokla,Gujarat,575,90,31
+80834,110,Pani puri,Uttar Pradesh,20,5,31
+80836,110,Pani puri,Uttar Pradesh,20,5,34
+80840,110,Pani puri,Uttar Pradesh,20,5,39
+80843,110,Pani puri,Uttar Pradesh,20,5,21
+80837,107,Jalebi,Uttar Pradesh,350,50,42
+80838,108,Peda,Uttar Pradesh,700,300,17
+80845,110,Pani puri,Uttar Pradesh,20,5,36
+80846,110,Pani puri,Uttar Pradesh,20,5,49
+80841,108,Peda,Uttar Pradesh,700,300,39
+80848,110,Pani puri,Uttar Pradesh,20,5,25
+80852,110,Pani puri,Uttar Pradesh,20,5,22
+80855,110,Pani puri,Uttar Pradesh,20,5,28
+80857,110,Pani puri,Uttar Pradesh,20,5,32
+80867,110,Pani puri,Uttar Pradesh,20,5,12
+80873,110,Pani puri,Uttar Pradesh,20,5,43
+80891,110,Pani puri,Uttar Pradesh,20,5,20
+80849,107,Jalebi,Uttar Pradesh,350,50,34
+80850,108,Peda,Uttar Pradesh,700,300,13
+80809,109,Rasgulla,West Bengal,45,25,20
+80819,109,Rasgulla,West Bengal,45,25,40
+80853,108,Peda,Uttar Pradesh,700,300,15
+80821,109,Rasgulla,West Bengal,45,25,22
+80824,109,Rasgulla,West Bengal,45,25,29
+80833,109,Rasgulla,West Bengal,45,25,24
+80835,109,Rasgulla,West Bengal,45,25,19
+80858,101,Malapua,Bihar,300,250,42
+80859,102,Dhokla,Gujarat,575,90,20
+80860,103,Mysore pak,Karnataka,275,250,40
+80839,109,Rasgulla,West Bengal,45,25,24
+80862,105,Gajar ka halwa,Punjab,1250,150,32
+80863,106,Ghevar,Rajasthan,500,250,14
+80864,107,Jalebi,Uttar Pradesh,350,50,25
+80865,108,Peda,Uttar Pradesh,700,300,44
+80842,109,Rasgulla,West Bengal,45,25,36
+80844,109,Rasgulla,West Bengal,45,25,44
+80868,105,Gajar ka halwa,Punjab,1250,150,49
+80869,106,Ghevar,Rajasthan,500,250,34
+80870,107,Jalebi,Uttar Pradesh,350,50,43
+80871,108,Peda,Uttar Pradesh,700,300,45
+80847,109,Rasgulla,West Bengal,45,25,11
+80851,109,Rasgulla,West Bengal,45,25,13
+80874,101,Malapua,Bihar,300,250,46
+80875,102,Dhokla,Gujarat,575,90,21
+80876,103,Mysore pak,Karnataka,275,250,23
+80854,109,Rasgulla,West Bengal,45,25,37
+80878,105,Gajar ka halwa,Punjab,1250,150,28
+80879,106,Ghevar,Rajasthan,500,250,32
+80880,107,Jalebi,Uttar Pradesh,350,50,27
+80881,108,Peda,Uttar Pradesh,700,300,13
+80882,101,Malapua,Bihar,300,250,18
+80883,102,Dhokla,Gujarat,575,90,32
+80884,103,Mysore pak,Karnataka,275,250,13
+80856,109,Rasgulla,West Bengal,45,25,31
+80886,105,Gajar ka halwa,Punjab,1250,150,27
+80887,106,Ghevar,Rajasthan,500,250,39
+80888,107,Jalebi,Uttar Pradesh,350,50,46
+80889,108,Peda,Uttar Pradesh,700,300,11
+80866,109,Rasgulla,West Bengal,45,25,27
+80872,109,Rasgulla,West Bengal,45,25,21
+80892,101,Malapua,Bihar,300,250,31
+80893,102,Dhokla,Gujarat,575,90,25
+80894,103,Mysore pak,Karnataka,275,250,14
+80890,109,Rasgulla,West Bengal,45,25,49
+80896,105,Gajar ka halwa,Punjab,1250,150,48
+80897,106,Ghevar,Rajasthan,500,250,14
+80898,107,Jalebi,Uttar Pradesh,350,50,28
+80899,108,Peda,Uttar Pradesh,700,300,12
+80900,109,Rasgulla,West Bengal,45,25,12
