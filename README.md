@@ -1,50 +1,48 @@
-Of course! Here is your README file formatted exactly like the example you provided.
+# 🛒 SQL Sales Trend Analysis (Internship Task 06)
 
-🛒 SQL Sales Trend Analysis (Internship Task 06)
-📑 Table of Contents
-Project Overview
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL%20%7C%20MySQL%20%7C%20SQLite-blue) 
+![Level](https://img.shields.io/badge/Level-Beginner-green) 
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Objectives
+---
 
-Project Structure
+## 📑 Table of Contents
+- [📌 Project Overview](#-project-overview)
+- [🎯 Objectives](#-objectives)
+- [🗂️ Project Structure](#️-project-structure)
+- [📊 Data Analysis & Findings](#-data-analysis--findings)
+- [🔎 Findings](#-findings)
+- [📑 Reports](#-reports)
+- [✅ Conclusion](#-conclusion)
+- [🚀 How to Use](#-how-to-use)
+- [👨‍💻 Author](#-author)
+- [📜 License](#-license)
 
-Data Analysis & Findings
+---
 
-Findings
+## 📌 Project Overview
+**Project Title:** Sales Trend Analysis (Internship Task 06)  
+**Level:** Beginner  
+**Database:** PostgreSQL / MySQL / SQLite  
 
-Reports
+This project is part of the **Data Analyst Internship**. It demonstrates core SQL skills for analyzing sales data by calculating and interpreting **monthly revenue** and **order volume**.  
+The analysis uncovers **time-based sales trends** and provides actionable insights for **business decision-making**.
 
-Conclusion
+---
 
-How to Use
+## 🎯 Objectives
+- **Database Setup:** Create schema with two related tables for customer orders and product details.  
+- **Relationship Building:** Connect tables via **Foreign Key**.  
+- **Data Aggregation:** Use **SUM()** and **COUNT(DISTINCT)** to compute KPIs.  
+- **Business Analysis:** Answer real-world questions like revenue trends, peak months, and yearly performance.  
 
-Author
+---
 
-License
+## 🗂️ Project Structure
+### 1. Database Setup
 
-📌 Project Overview
-Project Title: Sales Trend Analysis (Internship Task 06)
-Level: Beginner
-Database: PostgreSQL / MySQL / SQLite
-
-This project is part of the Data Analyst Internship (Task 06). It demonstrates core SQL skills for analyzing sales data by calculating and interpreting monthly revenue and order volume. The analysis aims to uncover time-based trends and provide actionable insights for business decision-making.
-
-🎯 Objectives
-Database Setup: Create a two-table database schema for customer orders and product details.
-
-Relationship Building: Establish a relationship between the tables using a Foreign Key.
-
-Data Aggregation: Use aggregate functions like SUM() and COUNT(DISTINCT) to calculate key metrics.
-
-Business Analysis: Answer real-world business questions by analyzing sales trends over time.
-
-🗂️ Project Structure
-1. Database Setup
-Two tables are created to hold customer order information and specific order details.
-
-SQL
-
--- Table to store customer and order date information
+```sql
+-- Table: Customer Orders
 CREATE TABLE Customer_Orders (
     "Name" VARCHAR(255),
     "Order ID" INT PRIMARY KEY,
@@ -54,7 +52,7 @@ CREATE TABLE Customer_Orders (
     "State" VARCHAR(255)
 );
 
--- Table to store product and pricing details for each order
+-- Table: Orders (Product & Pricing Details)
 CREATE TABLE Orders (
     "Order ID" INT,
     "Product ID" INT,
@@ -63,103 +61,96 @@ CREATE TABLE Orders (
     "Selling Price" FLOAT,
     "Product Cost" FLOAT,
     "Quantity" FLOAT,
-    FOREIGN KEY ("Order ID") REFERENCES Customer_Orders("Order ID")
-);
+
 📊 Data Analysis & Findings
-Overall Sales Trend (Revenue & Volume)
+1. Overall Sales Trend (Revenue & Order Volume)
 
-SQL
-
--- Get a full monthly report of revenue and order volume.
 SELECT
     EXTRACT(YEAR FROM co."Order Date") AS sales_year,
     EXTRACT(MONTH FROM co."Order Date") AS sales_month,
     SUM(o."Quantity" * o."Selling Price") AS monthly_revenue,
     COUNT(DISTINCT o."Order ID") AS monthly_order_volume
-FROM
-    Customer_Orders co
-JOIN
-    Orders o ON co."Order ID" = o."Order ID"
-GROUP BY
-    sales_year,
-    sales_month
-ORDER BY
-    sales_year,
-    sales_month;
-Top 3 Months by Revenue
+FROM Customer_Orders co
+JOIN Orders o ON co."Order ID" = o."Order ID"
+GROUP BY sales_year, sales_month
+ORDER BY sales_year, sales_month;
 
-SQL
+2. Top 3 Months by Revenue
 
--- Get the top 3 months with the highest revenue.
 SELECT
     EXTRACT(YEAR FROM co."Order Date") AS sales_year,
     EXTRACT(MONTH FROM co."Order Date") AS sales_month,
     SUM(o."Quantity" * o."Selling Price") AS monthly_revenue
-FROM
-    Customer_Orders co
-JOIN
-    Orders o ON co."Order ID" = o."Order ID"
-GROUP BY
-    sales_year,
-    sales_month
-ORDER BY
-    monthly_revenue DESC -- Sort from highest to lowest revenue
-LIMIT 3; -- Get only the top 3 rows
-Annual Performance Review (e.g., for 2023)
+FROM Customer_Orders co
+JOIN Orders o ON co."Order ID" = o."Order ID"
+GROUP BY sales_year, sales_month
+ORDER BY monthly_revenue DESC
+LIMIT 3;
 
-SQL
+3. Annual Performance Review (e.g., 2023)
 
--- Get the monthly revenue trend for the year 2023.
 SELECT
     EXTRACT(YEAR FROM co."Order Date") AS sales_year,
     EXTRACT(MONTH FROM co."Order Date") AS sales_month,
     SUM(o."Quantity" * o."Selling Price") AS monthly_revenue
-FROM
-    Customer_Orders co
-JOIN
-    Orders o ON co."Order ID" = o."Order ID"
-WHERE
-    EXTRACT(YEAR FROM co."Order Date") = 2023 -- Filter for a specific year
-GROUP BY
-    sales_year,
-    sales_month
-ORDER BY
-    sales_month;
+FROM Customer_Orders co
+JOIN Orders o ON co."Order ID" = o."Order ID"
+WHERE EXTRACT(YEAR FROM co."Order Date") = 2023
+GROUP BY sales_year, sales_month
+ORDER BY sales_month;
+    FOREIGN KEY ("Order ID") REFERENCES Customer_Orders("Order ID")
+);
+
 🔎 Findings
-Business Health: The analysis provides a clear view of both revenue and order volume, giving a balanced perspective on business activity.
 
-Peak Seasons: Identified the highest-revenue months, which is crucial for planning marketing campaigns and managing inventory.
+Business Health: Balanced view of revenue & order volume.
 
-Performance Tracking: The queries allow for easy year-over-year and month-over-month performance comparisons.
+Peak Seasons: Identified top-performing months, helpful for marketing & inventory planning.
 
-Actionable Insights: The results directly inform strategic decisions, such as allocating more resources during historically slow months or capitalizing on peak periods.
+Performance Tracking: Easy YoY & MoM comparisons.
+
+Actionable Insights: Allocate more resources in low seasons & capitalize on peaks.
 
 📑 Reports
-Overall Sales Summary: A complete report showing monthly revenue and order volume over time.
 
-Top Performance Report: A list of the top-performing months by revenue.
+📌 Overall Sales Summary: Monthly revenue & order volume trends.
 
-Annual Report: A filtered report showing the sales trend for a specific year.
+🏆 Top Performance Report: Highest revenue months.
+
+📅 Annual Report: Year-specific revenue breakdown.
 
 ✅ Conclusion
-This project successfully demonstrates a complete SQL analysis pipeline for time-series sales data. It covers database schema design, data aggregation, and the generation of actionable business insights. The queries are designed to be easily adapted for ongoing monitoring and reporting in a real-world retail environment.
+
+This project demonstrates a complete SQL analysis workflow for time-series sales data.
+It includes schema design, data aggregation, and reporting queries.
+The approach can be reused for real-world retail monitoring & decision-making.
 
 🚀 How to Use
+
 Clone the repository:
 
-Bash
-
 git clone https://github.com/your-username/your-repo-name.git
-Set up the database and tables using the SQL script provided in the Project Structure section.
 
-Import your CSV data into the Customer_Orders and Orders tables.
 
-Run the queries in your SQL environment to analyze the data.
+Set up database tables using the SQL script in Project Structure.
+
+Import your CSV data into Customer_Orders and Orders.
+
+Run the analysis queries in your SQL environment.
 
 👨‍💻 Author
+
 Deewakar Kumar
-📧 Email: deewakar2412@gmail.com
+📧 deewakar2412@gmail.com
+
 📍 Bokaro, Jharkhand, India
+🔗 LinkedIn
 
 📜 License
-This project is licensed under the MIT License. Feel free to use and modify for learning and development purposes.
+
+This project is licensed under the MIT License.
+Feel free to use, modify, and share for learning & development purposes.
+
+
+⚡ Now you can **copy-paste** this directly into your `README.md` file.  
+Do you also want me to add a **preview section with example graphs/tables (monthly revenue trends)** to make it look more professional for GitHub?
