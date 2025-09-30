@@ -145,10 +145,10 @@ Run the analysis queries in your SQL environment.
 🔗 [LinkedIn](https://www.linkedin.com/in/deewakar-kumar-b61652248/)  
 
 
-📜 License
+## 📜 License
+This project is licensed under the **MIT License**.  
+Feel free to use, modify, and share for **learning & development purposes**.  
 
-This project is licensed under the MIT License.
-Feel free to use, modify, and share for learning & development purposes.
 
 
 ⚡ Now you can **copy-paste** this directly into your `README.md` file.  
