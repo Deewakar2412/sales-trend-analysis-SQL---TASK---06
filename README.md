@@ -138,13 +138,12 @@ Import your CSV data into Customer_Orders and Orders.
 
 Run the analysis queries in your SQL environment.
 
-👨‍💻 Author
+## 👨‍💻 Author
+**Deewakar Kumar**  
+📧 [deewakar2412@gmail.com](mailto:deewakar2412@gmail.com)  
+📍 Bokaro, Jharkhand, India  
+🔗 [LinkedIn](https://www.linkedin.com/in/deewakar-kumar-b61652248/)  
 
-Deewakar Kumar
-📧 deewakar2412@gmail.com
-
-📍 Bokaro, Jharkhand, India
-🔗 LinkedIn
 
 📜 License
 
