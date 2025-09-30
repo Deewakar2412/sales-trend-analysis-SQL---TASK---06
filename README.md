@@ -66,3 +66,43 @@ CREATE TABLE Orders (
     "Quantity" FLOAT,
     FOREIGN KEY ("Order ID") REFERENCES Customer_Orders("Order ID")
 );
+
+## 📊 Data Analysis & Findings
+
+### 1. **Overall Sales Trend (Revenue & Volume)**
+
+```sql
+SELECT
+    EXTRACT(YEAR FROM co."Order Date") AS sales_year,
+    EXTRACT(MONTH FROM co."Order Date") AS sales_month,
+    SUM(o."Quantity" * o."Selling Price") AS monthly_revenue,
+    COUNT(DISTINCT o."Order ID") AS monthly_order_volume
+FROM Customer_Orders co
+JOIN Orders o ON co."Order ID" = o."Order ID"
+GROUP BY sales_year, sales_month
+ORDER BY sales_year, sales_month;
+
+### 2. **Top 3 Months by Revenue
+```sql
+SELECT
+    EXTRACT(YEAR FROM co."Order Date") AS sales_year,
+    EXTRACT(MONTH FROM co."Order Date") AS sales_month,
+    SUM(o."Quantity" * o."Selling Price") AS monthly_revenue
+FROM Customer_Orders co
+JOIN Orders o ON co."Order ID" = o."Order ID"
+GROUP BY sales_year, sales_month
+ORDER BY monthly_revenue DESC
+LIMIT 3;
+
+### 3. **Annual Performance Review (2023 Example)
+```sql
+SELECT
+    EXTRACT(YEAR FROM co."Order Date") AS sales_year,
+    EXTRACT(MONTH FROM co."Order Date") AS sales_month,
+    SUM(o."Quantity" * o."Selling Price") AS monthly_revenue
+FROM Customer_Orders co
+JOIN Orders o ON co."Order ID" = o."Order ID"
+WHERE EXTRACT(YEAR FROM co."Order Date") = 2023
+GROUP BY sales_year, sales_month
+ORDER BY sales_month;
+
